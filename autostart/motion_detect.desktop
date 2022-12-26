@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=motion_detect2
+Exec=/usr/bin/python3 /home/peter/motion_detect2.py

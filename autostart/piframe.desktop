@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=piframe
+Exec=/home/peter/piframe/start_browser.sh
