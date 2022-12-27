@@ -57,6 +57,7 @@ def get_random_picture():
                 }).execute()
             items = results.get('mediaItems', [])
             pictures.extend(list(filter(is_picture, items)))
+            #pictures.extend(list(items))
             nextpagetoken = results.get('nextPageToken', '')
 
         pictures_cache['ts'] = ts
@@ -135,6 +136,9 @@ def get_picture():
 def get_fullscreen():
     return render_template('fullscreen.html')
 
+@app.route("/ipad")
+def get_ipad():
+    return render_template('ipad.html')
 
 SCOPES = ['https://www.googleapis.com/auth/photoslibrary.readonly']
 creds = None
