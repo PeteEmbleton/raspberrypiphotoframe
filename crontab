@@ -1,0 +1,6 @@
+0 22 * * * /bin/bash /home/peter/turn_mon_off.sh
+*/10 * * * * env DISPLAY=:0 XAUTHORITY=/home/peter/.Xauthority /usr/bin/wmctrl -a "Assistant"
+*/11 * * * * env DISPLAY=:0 XAUTHORITY=/home/peter/.Xauthority /usr/bin/wmctrl -a "Photo"
+@reboot sleep 240 && env DISPLAY=:0 XAUTHORITY=/home/peter/.Xauthority /usr/bin/chromium-browser --kiosk --new-window http://192.168.68.250>
+*/5 * * * * env DISPLAY=:0 XAUTHORITY=/home/peter/.Xauthority xdotool search  --class chrom* windowactivate --sync key F5
+@reboot env DISPLAY=:0 /bin/bash /home/peter/piframe/start_browser.sh
